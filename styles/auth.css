@@ -66,6 +66,12 @@ html, body {margin: 0; height: 100%; overflow: hidden}
   background-color: #FF9674;
 }
 
+.flex-items {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
 .project-tab {
     padding: 10%;
     margin-top: -8%;
