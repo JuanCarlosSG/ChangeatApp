@@ -39,48 +39,52 @@
           </nav>
 
           <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="nav-login" role="tabpanel" aria-labelledby="nav-login-tab">
+
+            <form class="tab-pane fade show active" id="nav-login" role="tabpanel" aria-labelledby="nav-login-tab">
               <div class="row">
                 <div class="col"></div>
                 <div class="col-10">
                   <div class="pt-5">
-                    <input type="text" class="form-control color-input" name="Email" placeholder="Email">
+                    <input type="email" id="sEmail" class="form-control color-input" name="Email" placeholder="Email">
                   </div>
                   <div class="pt-4">
-                    <input type="password" class="form-control color-input" name="Password" placeholder="Password">
+                    <input type="password" id="sPassword" class="form-control color-input" name="Password" placeholder="Password">
                   </div>
                   <div class="pt-4 flex-items">
                     <a href="" style="color: #6E9DFF; font-size: 12px;">Forgot your password?</a>
 
-                    <button type="button" name="button" class="btn btn-primary color-button">Log in</button>
+                    <button type="submit" name="button" class="btn btn-primary color-button" id="login">Log in</button>
                   </div>
                 </div>
                 <div class="col"></div>
               </div>
-            </div>
+            </form>
 
-            <div class="tab-pane fade" id="nav-signup" role="tabpanel" aria-labelledby="nav-signup-tab">
+            <form class="tab-pane fade" id="nav-signup" role="tabpanel" aria-labelledby="nav-signup-tab">
               <div class="row">
                 <div class="col"></div>
                 <div class="col-10">
                   <div class="pt-5">
-                    <input type="text" class="form-control color-input-su" name="Email" placeholder="Email">
+                    <input type="text" id="rName" class="form-control color-input-su" name="Name" placeholder="Nombre">
                   </div>
                   <div class="pt-4">
-                    <input type="password" class="form-control color-input-su" name="Password" placeholder="Password">
+                    <input type="email" id="rEmail" class="form-control color-input-su" name="Email" placeholder="Email">
                   </div>
                   <div class="pt-4">
-                    <input type="password" class="form-control color-input-su" name="PasswordR" placeholder="Repeat Password">
+                    <input type="password" id="rPassword" class="form-control color-input-su" name="Password" placeholder="Password">
+                  </div>
+                  <div class="pt-4">
+                    <input type="password" id="rPasswordR" class="form-control color-input-su" name="PasswordR" placeholder="Repeat Password">
                   </div>
                   <div class="pt-4 flex-items">
                     <a href="" style="color: #FF7648; font-size: 12px;">Need help?</a>
 
-                    <button type="button" name="button" class="btn btn-primary color-button-su">Sign Up</button>
+                    <button type="submit" name="button" class="btn btn-primary color-button-su">Sign Up</button>
                   </div>
                 </div>
                 <div class="col"></div>
               </div>
-            </div>
+            </form>
 
           </div>
 
@@ -98,6 +102,9 @@
     </div>
 
     <script type="module" src="../scripts/auth.js"></script>
+    <script type="module" src="../scripts/index.js"></script>
+    <script type="module" src="../scripts/auth/signin.js"></script>
+    <script type="module" src="../scripts/auth/signup.js"></script>
 
   </body>
 </html>
