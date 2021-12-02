@@ -22,38 +22,37 @@
 
   </head>
   <body>
-    <div class="container mt-4" id="mainFigure">
+    <div class="container mt-4 d-none d-sm-block" id="mainFigure">
       <div class="row">
       </div>
       <div class="container">
         <div class="row">
           <!-- Tab Menu -->
-          <div class="col-2 d-none d-sm-block position-relative">
+          <div class="col-md-2 position-relative">
             <img src="../img/profile_pic.png" alt="" class="img-fluid mt-4 p-4">
 
-            <nav>
+            <nav class="d-flex justify-content-center">
 
-              <div class="nav" id="nav-tab" role="tablist">
+              <div class="nav flex-column force-left" id="nav-tab" role="tablist">
 
 
                 <a href="" class="nav-item active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">
-                  <img src="../img/Home.svg">
+                  <img src="../img/Home.svg" class="spacer">
                   Inicio
                 </a>
 
-
                 <a href="" class="nav-item" id="nav-classes-tab" data-bs-toggle="tab" data-bs-target="#nav-classes" role="tab" aria-controls="nav-classes" aria-selected="false">
-                  <img src="../img/Clases.svg">
+                  <img src="../img/Clases.svg" class="spacer">
                   Clases
                 </a>
 
                 <a href="" class="nav-item" id="nav-retos-tab" data-bs-toggle="tab" data-bs-target="#nav-retos" role="tab" aria-controls="nav-retos" aria-selected="false">
-                  <img src="../img/Retos.svg">
+                  <img src="../img/Retos.svg" class="spacer">
                   Retos
                 </a>
 
                 <a href="" class="nav-item" id="nav-tips-tab" data-bs-toggle="tab" data-bs-target="#nav-tips" role="tab" aria-controls="nav-tips" aria-selected="false">
-                  <img src="../img/Tips.svg" class="pr-5">
+                  <img src="../img/Tips.svg" class="spacer">
                   Tips
                 </a>
 
@@ -62,7 +61,8 @@
             </nav>
 
 
-            <div class="d-flex position-relative top-50 justify-content-center ">
+            <div class="d-flex position-sticky top-100 d-flex justify-content-center flex-column">
+              <button type="button" name="button" class="btn btn-danger m-3">Cerrar Sesión</button>
               <img src="../img/Logo_mini_white.svg">
             </div>
 
@@ -74,7 +74,7 @@
               <h2 class="mt-3">Hola, Juan Carlos</h2>
               <div class="tab-content" id="nav-tabContent">
 
-                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <div class="tab-pane fade show active " id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                   <div class="row">
                     Inicio
                   </div>

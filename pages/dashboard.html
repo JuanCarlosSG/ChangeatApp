@@ -33,7 +33,7 @@
 
             <nav class="d-flex justify-content-center">
 
-              <div class="nav flex-column" id="nav-tab" role="tablist">
+              <div class="nav flex-column force-left" id="nav-tab" role="tablist">
 
 
                 <a href="" class="nav-item active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">
@@ -61,7 +61,8 @@
             </nav>
 
 
-            <div class="d-flex position-sticky top-100 d-flex justify-content-center">
+            <div class="d-flex position-sticky top-100 d-flex justify-content-center flex-column">
+              <button type="button" name="button" class="btn btn-danger m-4">Cerrar Sesión</button>
               <img src="../img/Logo_mini_white.svg">
             </div>
 
@@ -73,24 +74,28 @@
               <h2 class="mt-3">Hola, Juan Carlos</h2>
               <div class="tab-content" id="nav-tabContent">
 
-                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <!-- Inicio -->
+                <div class="tab-pane fade show active " id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                   <div class="row">
                     Inicio
                   </div>
                 </div>
 
+                <!-- Clases -->
                 <div class="tab-pane fade" id="nav-classes" role="tabpanel" aria-labelledby="nav-classes-tab">
                   <div class="row">
                     Clases
                   </div>
                 </div>
 
+                <!-- Retos -->
                 <div class="tab-pane fade" id="nav-retos" role="tabpanel" aria-labelledby="nav-retos-tab">
                   <div class="row">
                     Retos
                   </div>
                 </div>
 
+                <!-- Tips -->
                 <div class="tab-pane fade" id="nav-tips" role="tabpanel" aria-labelledby="nav-tips-tab">
                   <div class="row">
                     Tips
