@@ -11,18 +11,18 @@ onAuthStateChanged(auth, (user) => {
     // https://firebase.google.com/docs/reference/js/firebase.User
     const uid = user.uid;
 
-    if (user.email === "admin@ce.com" & window.location.pathname === "/changeatapp/pages/dashboard.html") {
-        window.location.pathname = "/changeatapp/pages/dashboard_admin.html";
+    if (user.email === "admin@ce.com" & window.location.pathname === "/ChangeatApp/pages/dashboard.html") {
+        window.location.pathname = "/ChangeatApp/pages/dashboard_admin.html";
     }
 
     if (user.email != "admin@ce.com" & window.location.pathname === "/changeatapp/pages/dashboard_admin.html") {
-        window.location.pathname = "/changeatapp/pages/dashboard.html";
+        window.location.pathname = "/ChangeatApp/pages/dashboard.html";
     }
 
   } else {
     // User is signed out
 
-    window.location.pathname = "/changeatapp/index.html";
+    window.location.pathname = "/ChangeatApp/index.html";
 
   }
 });

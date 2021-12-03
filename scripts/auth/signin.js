@@ -23,9 +23,9 @@ fForm.addEventListener("submit", async (e) => {
         const user = userCredential.user;
         //alert("SIGNED IN SUCCESFULLY");
         if (email === "admin@ce.com") {
-          window.location.pathname = "/changeatapp/pages/dashboard_admin.html";
+          window.location.pathname = "/ChangeatApp/pages/dashboard_admin.html";
         } else {
-          window.location.pathname = "/changeatapp/pages/dashboard.html";
+          window.location.pathname = "/ChangeatApp/pages/dashboard.html";
         }
         fForm.reset();
         // TAKE USER TO HOME PAGE

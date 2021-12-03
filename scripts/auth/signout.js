@@ -12,7 +12,7 @@ buttonSO.addEventListener("click", async (e) => {
         // Sign-out successful.
         alert("SIGN OUT SUCCESFULLY");
         //window.open("index.html", "_self");
-        window.location.pathname = "index.html";
+        window.location.pathname = "/ChangeatApp/index.html";
       }).catch((error) => {
         // An error happened.
         const errorCode = error.code;
@@ -29,7 +29,7 @@ buttonSOR.addEventListener("click", async (e) => {
         // Sign-out successful.
         alert("SIGN OUT SUCCESFULLY");
         //window.open("index.html", "_self");
-        window.location.pathname = "index.html";
+        window.location.pathname = "/ChangeatApp/index.html";
       }).catch((error) => {
         // An error happened.
         const errorCode = error.code;
