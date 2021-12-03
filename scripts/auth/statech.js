@@ -11,9 +11,9 @@ onAuthStateChanged(auth, (user) => {
     console.log(user.displayName);
 
     if (user.displayName) {
-      window.location.pathname = "https://juancarlossg.github.io/ChangeatApp/pages/dashboard.html";
+      window.location.pathname = "ChangeatApp/pages/dashboard.html";
     } else {
-      window.location.pathname = "https://juancarlossg.github.io/ChangeatApp/pages/dashboard_admin.html";
+      window.location.pathname = "ChangeatApp/pages/dashboard_admin.html";
     }
     // ...
   } else {
