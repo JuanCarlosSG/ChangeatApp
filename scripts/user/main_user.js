@@ -14,7 +14,7 @@ let ids = [];
 
 let id = null;
 
-const challengeContainer = document.getElementById("nav-retos");
+const challengeContainer = document.getElementById("challenge-cont");
 
 const onGetChallenges = (callback) =>
   onSnapshot(collection(db, "challenges"), callback);
@@ -41,24 +41,18 @@ window.addEventListener("DOMContentLoaded", async (e) => {
           const challenge = obj.data();
 
           challengeContainer.innerHTML =  `
-            <div class="row card border-primary">
-              <div class="col p-3" style="text-align: center;">
-                <h3 style="text-align: left;">Reto</h3>
-                <h4>${challenge.name}</h4>
-                <div class="row p-3">
-                  <div class="col">
-                    <h5>Ingredientes</h5>
-                    <p>${challenge.ingredients}</p>
-                    <h5>Instrucciones</h5>
-                    <p>${challenge.ingredients}</p>
-                  </div>
-                  <div class="col">
-                    <img class="img-fluid rounded" src="${challenge.img}">
-                    <div class="d-flex justify-content-end">
-                      <button class="btn btn-primary mb-0 m-3" id="btn-next-card">Nuevo Reto</button>
-                      <button class="btn btn-primary mr-3 mb-0 mt-3 " id="btn-complete-card">Completar</button>
-                    </div>
-                  </div>
+            <h4>${challenge.name}</h4>
+            <div class="row p-2">
+              <div class="col p-5">
+                <h5>Ingredientes</h5>
+                <p>${challenge.ingredients}</p>
+                <h5>Instrucciones</h5>
+                <p>${challenge.ingredients}</p>
+              </div>
+              <div class="col">
+                <img class="img-fluid p-5" src="${challenge.img}" style="border-radius: 100px;">
+                <div class="d-flex justify-content-end">
+                  <button class="btn btn-primary mt-3" id="btn-complete-card">Completar</button>
                 </div>
               </div>
             </div>`;
@@ -68,5 +62,31 @@ window.addEventListener("DOMContentLoaded", async (e) => {
     });
 
   });
+
+});
+
+document.getElementById("btn-next-card").addEventListener("click", async (e) => {
+
+    id = ids[Math.floor(Math.random() * ids.length)];
+
+    const obj = await getChallenge(id);
+    const challenge = obj.data();
+
+    challengeContainer.innerHTML =  `
+      <h4>${challenge.name}</h4>
+      <div class="row p-2">
+        <div class="col p-5">
+          <h5>Ingredientes</h5>
+          <p>${challenge.ingredients}</p>
+          <h5>Instrucciones</h5>
+          <p>${challenge.ingredients}</p>
+        </div>
+        <div class="col">
+          <img class="img-fluid p-5" src="${challenge.img}" style="border-radius: 100px;">
+          <div class="d-flex justify-content-end">
+            <button class="btn btn-primary mt-3" id="btn-complete-card">Completar</button>
+          </div>
+        </div>
+      </div>`;
 
 });
