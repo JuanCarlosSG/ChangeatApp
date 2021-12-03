@@ -59,7 +59,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
                 <h5>Ingredientes</h5>
                 <p>${challenge.ingredients}</p>
                 <h5>Instrucciones</h5>
-                <p>${challenge.ingredients}</p>
+                <p>${challenge.instructions}</p>
               </div>
               <div class="col">
                 <img class="img-fluid p-5" src="${challenge.img}" style="border-radius: 100px;">
