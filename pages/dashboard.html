@@ -62,7 +62,7 @@
 
 
             <div class="d-flex position-sticky top-100 d-flex justify-content-center flex-column">
-              <button type="button" name="button" class="btn btn-danger m-4">Cerrar Sesión</button>
+              <button type="button" name="button" class="btn btn-danger m-4" id="signOut">Cerrar Sesión</button>
               <img src="../img/Logo_mini_white.svg">
             </div>
 
@@ -71,7 +71,7 @@
           <!-- Tab Content -->
           <div class="col-10 mt-3" id="mainContent">
             <div class="container">
-              <h2 class="mt-3">Hola, Juan Carlos</h2>
+              <h2 class="mt-3" id="greetCard">Hola,</h2>
               <div class="tab-content" id="nav-tabContent">
 
                 <!-- Inicio -->
@@ -229,6 +229,7 @@
 
     <script type="module" src="../scripts/index.js"></script>
     <script type="module" src="../scripts/user/main_user.js"></script>
+    <script type="module" src="../scripts/auth/signout.js"></script>
 
   </body>
 

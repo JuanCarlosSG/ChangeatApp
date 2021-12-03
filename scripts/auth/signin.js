@@ -17,21 +17,24 @@ fForm.addEventListener("submit", async (e) => {
   const email = fEmail.value;
   const password = fPassword.value;
 
-  console.log(email, password);
-
-  signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      // Signed in
-      const user = userCredential.user;
-      alert("SIGNED IN SUCCESFULLY");
-      fForm.reset();
-      // TAKE USER TO HOME PAGE
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      console.log(errorCode);
-      alert(errorMessage);
-    });
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        alert("SIGNED IN SUCCESFULLY");
+        if (email === "admin@ce.com") {
+          window.open("/pages/dashboard_admin.html", "_self");
+        } else {
+          window.open("/pages/dashboard.html", "_self");
+        }
+        fForm.reset();
+        // TAKE USER TO HOME PAGE
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode);
+        alert(errorMessage);
+      });
 
 });

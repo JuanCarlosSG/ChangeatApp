@@ -8,11 +8,16 @@ onAuthStateChanged(auth, (user) => {
     // User is signed in, see docs for a list of available properties
     // https://firebase.google.com/docs/reference/js/firebase.User
     const uid = user.uid;
-    alert("STATE CHANGED: User is signed in");
+    console.log(user.displayName);
+
+    if (user.displayName) {
+      window.open("/pages/dashboard.html", "_self");
+    } else {
+      window.open("/pages/dashboard_admin.html", "_self");
+    }
     // ...
   } else {
     // User is signed out
     // ..
-    alert("STATE CHANGED: User is signed out");
   }
 });

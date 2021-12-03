@@ -8,6 +8,12 @@ import {
   getDoc
 } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-firestore.js";
 
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-auth.js";
+
+const auth = getAuth();
+
+const user = auth.currentUser;
+
 const db = getFirestore(app);
 
 let ids = [];
@@ -26,6 +32,12 @@ window.addEventListener("DOMContentLoaded", async (e) => {
   e.preventDefault();
   // const doc = await getMovie(e.target.dataset.id);
   // const movie = doc.data();
+
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      document.getElementById("greetCard").innerText = `Hola, ${user.displayName}`;
+    }
+  });
 
   onGetChallenges((querySnapshot) => {
     querySnapshot.forEach((doc) => {

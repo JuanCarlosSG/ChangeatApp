@@ -2,14 +2,16 @@ import { getAuth, signOut} from "https://www.gstatic.com/firebasejs/9.4.1/fireba
 
 const auth = getAuth();
 
-const fForm = document.getElementById("signout-form");
+const buttonSO = document.getElementById("signOut");
 
-fForm.addEventListener("submit", async (e) => {
+buttonSO.addEventListener("click", async (e) => {
     e.preventDefault();
 
     signOut(auth).then(() => {
         // Sign-out successful.
         alert("SIGN OUT SUCCESFULLY");
+        //window.open("index.html", "_self");
+        window.location.pathname = "../index.html";
       }).catch((error) => {
         // An error happened.
         const errorCode = error.code;
