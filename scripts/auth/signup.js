@@ -26,7 +26,7 @@ fForm.addEventListener("submit", async (e) => {
             .then((userCredential) => {
                 // Signed in
                 const user = userCredential.user;
-                alert("SUCCESFULL REGISTER");
+                //alert("SUCCESFULL REGISTER");
 
                 updateProfile(auth.currentUser, {
                   displayName: fName.value
@@ -37,7 +37,7 @@ fForm.addEventListener("submit", async (e) => {
                     window.location.pathname = "pages/dashboard.html";
                   }
                 }).catch((error) => {
-                  alert("Error while saving profile");
+                  alert("Error while saving profile name");
                 });
 
                 fForm.reset();

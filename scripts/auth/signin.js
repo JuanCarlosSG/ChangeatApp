@@ -21,7 +21,7 @@ fForm.addEventListener("submit", async (e) => {
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
-        alert("SIGNED IN SUCCESFULLY");
+        //alert("SIGNED IN SUCCESFULLY");
         if (email === "admin@ce.com") {
           window.location.pathname = "pages/dashboard_admin.html";
         } else {
