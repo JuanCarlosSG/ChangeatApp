@@ -13,16 +13,16 @@ onAuthStateChanged(auth, (user) => {
 
     if (user.email != "admin@ce.com") {
       if (user.displayName) {
-        window.location.pathname = "pages/dashboard.html";
+        window.location.pathname = "/changeat/pages/dashboard.html";
       }
     } else {
       if (user.displayName) {
-        window.location.pathname = "pages/dashboard_admin.html";
+        window.location.pathname = "/changeat/pages/dashboard_admin.html";
       }
     }
     // ...
   } else {
     // User is signed out
-    
+
   }
 });
