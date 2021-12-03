@@ -23,9 +23,11 @@ fForm.addEventListener("submit", async (e) => {
         const user = userCredential.user;
         alert("SIGNED IN SUCCESFULLY");
         if (email === "admin@ce.com") {
-          window.open("/pages/dashboard_admin.html", "_self");
+          window.location.pathname = "../ChangeatApp/pages/dashboard_admin.html";
+          //window.open("/pages/dashboard_admin.html", "_self");
         } else {
-          window.open("/pages/dashboard.html", "_self");
+          window.location.pathname = "../ChangeatApp/pages/dashboard.html";
+          //window.open("/pages/dashboard.html", "_self");
         }
         fForm.reset();
         // TAKE USER TO HOME PAGE
