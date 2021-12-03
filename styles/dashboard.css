@@ -121,3 +121,9 @@ a {
   color: white;
   border: none;
 }
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.admin-l.active {
+  background: #3F7DFF;
+  color: white;
+  border: none;
+}
