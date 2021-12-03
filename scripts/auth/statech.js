@@ -11,9 +11,9 @@ onAuthStateChanged(auth, (user) => {
     console.log(user.displayName);
 
     if (user.displayName) {
-      window.open("/pages/dashboard.html", "_self");
+      window.open("dashboard_admin.html", "_self");
     } else {
-      window.open("/pages/dashboard_admin.html", "_self");
+      window.open("dashboard.html", "_self");
     }
     // ...
   } else {
