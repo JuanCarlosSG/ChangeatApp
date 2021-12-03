@@ -1,19 +1,24 @@
-import { getAuth, onAuthStateChanged} from "https://www.gstatic.com/firebasejs/9.4.1/firebase-auth.js";
+import { getAuth, onAuthStateChanged, updateProfile} from "https://www.gstatic.com/firebasejs/9.4.1/firebase-auth.js";
 
 // Initialize Firebase Authentication
 const auth = getAuth();
+
+const fName = document.getElementById("rName");
 
 onAuthStateChanged(auth, (user) => {
   if (user) {
     // User is signed in, see docs for a list of available properties
     // https://firebase.google.com/docs/reference/js/firebase.User
     const uid = user.uid;
-    console.log(user.displayName);
 
-    if (user.displayName) {
-      window.location.pathname = "ChangeatApp/pages/dashboard.html";
+    if (user.email != "admin@ce.com") {
+      if (user.displayName) {
+        window.location.pathname = "pages/dashboard.html";
+      }
     } else {
-      window.location.pathname = "ChangeatApp/pages/dashboard_admin.html";
+      if (user.displayName) {
+        window.location.pathname = "pages/dashboard_admin.html";
+      }
     }
     // ...
   } else {

@@ -31,7 +31,11 @@ fForm.addEventListener("submit", async (e) => {
                 updateProfile(auth.currentUser, {
                   displayName: fName.value
                 }).then(() => {
-                  alert("Profile Updated");
+                  if (email === "admin@ce.com") {
+                    window.location.pathname = "pages/dashboard_admin.html";
+                  } else {
+                    window.location.pathname = "pages/dashboard.html";
+                  }
                 }).catch((error) => {
                   alert("Error while saving profile");
                 });
