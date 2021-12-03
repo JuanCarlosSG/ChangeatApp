@@ -13,11 +13,11 @@ onAuthStateChanged(auth, (user) => {
 
     if (user.email != "admin@ce.com") {
       if (user.displayName) {
-        window.location.pathname = "/changeat/pages/dashboard.html";
+        window.location.pathname = "/changeatapp/pages/dashboard.html";
       }
     } else {
       if (user.displayName) {
-        window.location.pathname = "/changeat/pages/dashboard_admin.html";
+        window.location.pathname = "/changeatapp/pages/dashboard_admin.html";
       }
     }
     // ...

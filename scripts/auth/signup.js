@@ -32,9 +32,9 @@ fForm.addEventListener("submit", async (e) => {
                   displayName: fName.value
                 }).then(() => {
                   if (email === "admin@ce.com") {
-                    window.location.pathname = "/changeat/pages/dashboard_admin.html";
+                    window.location.pathname = "/changeatapp/pages/dashboard_admin.html";
                   } else {
-                    window.location.pathname = "/changeat/pages/dashboard.html";
+                    window.location.pathname = "/changeatapp/pages/dashboard.html";
                   }
                 }).catch((error) => {
                   alert("Error while saving profile name");
