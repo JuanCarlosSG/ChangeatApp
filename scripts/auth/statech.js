@@ -11,9 +11,9 @@ onAuthStateChanged(auth, (user) => {
     console.log(user.displayName);
 
     if (user.displayName) {
-      window.open("dashboard_admin.html", "_self");
+      window.location.pathname = "../pages/dashboard.html";
     } else {
-      window.open("dashboard.html", "_self");
+      window.location.pathname = "../pages/dashboard_admin.html";
     }
     // ...
   } else {
