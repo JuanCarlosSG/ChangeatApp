@@ -26,7 +26,7 @@ fForm.addEventListener("submit", async (e) => {
           window.location.pathname = "../ChangeatApp/pages/dashboard_admin.html";
           //window.open("/pages/dashboard_admin.html", "_self");
         } else {
-          window.location.pathname = "../ChangeatApp/pages/dashboard.html";
+          window.location.pathname = "https://juancarlossg.github.io/pages/dashboard.html";
           //window.open("/pages/dashboard.html", "_self");
         }
         fForm.reset();
