@@ -1,11 +1,12 @@
 import app from "../index.js";
 
-import { getAuth, createUserWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/9.4.1/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword, updateProfile} from "https://www.gstatic.com/firebasejs/9.4.1/firebase-auth.js";
 
 const auth = getAuth();
 
 const fForm = document.getElementById("nav-signup");
 
+const fName = document.getElementById("rName");
 const fEmail = document.getElementById("rEmail");
 const fPassword = document.getElementById("rPassword");
 const fPasswordR = document.getElementById("rPasswordR");
@@ -26,6 +27,15 @@ fForm.addEventListener("submit", async (e) => {
                 // Signed in
                 const user = userCredential.user;
                 alert("SUCCESFULL REGISTER");
+
+                updateProfile(auth.currentUser, {
+                  displayName: fName.value
+                }).then(() => {
+                  alert("Profile Updated");
+                }).catch((error) => {
+                  alert("Error while saving profile");
+                });
+
                 fForm.reset();
                 // ...
                 })
