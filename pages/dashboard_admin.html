@@ -21,8 +21,8 @@
     ></script>
 
   </head>
-  <body>
-    <div class="container mt-4 d-none d-sm-block" id="mainFigure">
+  <body style="background: #FFC5B1;">
+    <div class="container mt-4 d-none d-sm-block" id="mainFigure" style="background: #FF865E;">
       <div class="row">
       </div>
       <div class="container">
@@ -41,19 +41,14 @@
                   Inicio
                 </a>
 
-                <a href="" class="nav-item" id="nav-classes-tab" data-bs-toggle="tab" data-bs-target="#nav-classes" role="tab" aria-controls="nav-classes" aria-selected="false">
+                <a href="" class="nav-item" id="nav-users-tab" data-bs-toggle="tab" data-bs-target="#nav-users" role="tab" aria-controls="nav-users" aria-selected="false">
                   <img src="../img/Clases.svg" class="spacer">
-                  Clases
+                  Usuarios
                 </a>
 
                 <a href="" class="nav-item" id="nav-retos-tab" data-bs-toggle="tab" data-bs-target="#nav-retos" role="tab" aria-controls="nav-retos" aria-selected="false">
-                  <img src="../img/Retos.svg" class="spacer">
-                  Retos
-                </a>
-
-                <a href="" class="nav-item" id="nav-tips-tab" data-bs-toggle="tab" data-bs-target="#nav-tips" role="tab" aria-controls="nav-tips" aria-selected="false">
                   <img src="../img/Tips.svg" class="spacer">
-                  Tips
+                  Retos
                 </a>
 
               </div>
@@ -62,7 +57,7 @@
 
 
             <div class="d-flex position-sticky top-100 d-flex justify-content-center flex-column">
-              <button type="button" name="button" class="btn btn-danger m-3">Cerrar Sesión</button>
+              <button type="button" name="button" class="btn btn-danger m-4">Cerrar Sesión</button>
               <img src="../img/Logo_mini_white.svg">
             </div>
 
@@ -71,30 +66,81 @@
           <!-- Tab Content -->
           <div class="col-10 mt-3" id="mainContent">
             <div class="container">
-              <h2 class="mt-3">Hola, Juan Carlos</h2>
+              <h2 class="mt-3">Hola, Admin</h2>
               <div class="tab-content" id="nav-tabContent">
 
-                <div class="tab-pane fade show active " id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                   <div class="row">
                     Inicio
                   </div>
                 </div>
 
-                <div class="tab-pane fade" id="nav-classes" role="tabpanel" aria-labelledby="nav-classes-tab">
+                <div class="tab-pane fade" id="nav-users" role="tabpanel" aria-labelledby="nav-users-tab">
                   <div class="row">
-                    Clases
+                    Usuarios
                   </div>
                 </div>
 
                 <div class="tab-pane fade" id="nav-retos" role="tabpanel" aria-labelledby="nav-retos-tab">
-                  <div class="row">
-                    Retos
-                  </div>
-                </div>
 
-                <div class="tab-pane fade" id="nav-tips" role="tabpanel" aria-labelledby="nav-tips-tab">
                   <div class="row">
-                    Tips
+
+                    <div class="container p-4">
+
+                      <div class="row">
+
+                        <div class="col-md-6">
+
+                          <div class="card">
+
+                            <div class="card-body">
+
+                              <form id="challenges-form">
+
+                                <h4 class="mb-3">Nuevo Reto</h4>
+
+                                <div class="form-group">
+
+                                  <input type="text" id="challenge-name" class="form-control" placeholder="Nombre de la Receta"/>
+
+                                  <input type="text" id="challenge-img" class="form-control mt-3" placeholder="Imagen (URL)"/>
+
+                                  <textarea name="Ingredientes" id="challenge-ingredients" rows="5" class="form-control mt-3" cols="80" placeholder="Ingredientes" ></textarea>
+
+                                  <textarea name="Pasos" id="challenge-steps" rows="5" class="form-control mt-3" cols="80" placeholder="Instrucciones" ></textarea>
+
+                                </div>
+
+                                <p id="errorLabel" class="text-danger"></p>
+
+                                <div id="btn-cont">
+
+                                  <button class="btn btn-primary" id="btn-challenge-form">Guardar</button>
+
+                                  <button class="btn btn-primary" id="cancel" type="button">Cancelar</button>
+
+                                </div>
+
+                              </form>
+
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                        <div class="col-md-6 crud-admin" id="challenge-container">
+
+                          <h4>Retos:</h4>
+
+                          <h5 style="color: red;">No se encontraron retos activos.</h5>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+
                   </div>
                 </div>
 
@@ -107,6 +153,9 @@
       </div>
 
     </div>
+
+    <script type="module" src="../scripts/index.js"></script>
+    <script type="module" src="../scripts/admin/main.js"></script>
 
   </body>
 

@@ -57,6 +57,26 @@ a {
   text-align: left;
 }
 
+.crud-admin {
+  height: 75vh;
+  overflow-y: auto;
+
+}
+
+#cancel {
+  visibility: hidden;
+}
+
+#btn-next-card {
+  background: grey;
+  border-color: gray;
+}
+
+#btn-complete-card {
+  background: #24C4BC;
+  border-color: #24C4BC;
+}
+
 .nav .active {
-  
+
 }
